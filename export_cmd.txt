@@ -1,0 +1,10 @@
+<your-unique-resource-name> = "pubsubChat"
+
+az group create --name "myResourceGroup" -l "EastUS"
+
+az webpubsub create --name "<your-unique-resource-name>" --resource-group "myResourceGroup" --location "EastUS" --sku Free_F1
+
+az webpubsub key show --name "<your-unique-resource-name>" --resource-group "myResourceGroup" --query primaryConnectionString
+
+export WebPubSubConnectionString="<ouput>"
+
